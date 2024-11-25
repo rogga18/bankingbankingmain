@@ -24,7 +24,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
       id: bank.$id,
       availableBalance: 150000,
       currentBalance: 150000,
-      name: "Ck Test",
+      name: "Savings Plus",
       officialName: "Horizon Bank Account",
       mask: "6775",
       type: "checking",
@@ -54,9 +54,9 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     
     const account = {
       id: bank.$id,
-      availableBalance: 150000,
-      currentBalance: 150000,
-      name: "Rose Daniles",
+      availableBalance: 6000,
+      currentBalance: 6000,
+      name: "Lillian Justice",
       officialName: "Horizon Bank Account",
       mask: "6775",
       type: "checking",
@@ -86,8 +86,8 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     const sampleTransactions = [
         {
           "id": "tx4",
-          "name": "Wells Fargo Transfer",
-          "amount": 150,000.75,
+          "name": "401K Pension Transfer",
+          "amount": 6000.75,
           "date": "2024-03-12",
           "paymentChannel": "in store",
           "category": "Groceries",
@@ -97,10 +97,10 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
           "id": "tx5",
           "name": "Gas Station",
           "amount": 42.30,
-          "date": "2024-03-11",
-          "paymentChannel": "in store",
-          "category": "Transportation",
-          "type": "debit"
+          "date": "2024-03-12",
+          "paymentChannel": "Penssion",
+          "category": "Penssion",
+          "type": "Direct deposite"
       },
       {
           "id": "tx6",
