@@ -22,8 +22,8 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
 
     const accounts = banks?.map((bank: Bank) => ({
       id: bank.$id,
-      availableBalance: 600000,
-      currentBalance: 600000,
+      availableBalance: 6000,
+      currentBalance: 6000,
       name: "Savings Plus",
       officialName: "Horizon Bank Account",
       mask: "6775",
@@ -54,8 +54,8 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
    
     const account = {
       id: bank.$id,
-      availableBalance: 600000,
-      currentBalance: 600000,
+      availableBalance: 6000,
+      currentBalance: 6000,
       name: "Lillian Justice",
       officialName: "Horizon Bank Account",
       mask: "1547",
@@ -86,10 +86,10 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     const sampleTransactions = [
         {
           "id": "tx4",
-          "name": "Pension Transfer",
+          "name": "401K deposit",
           "amount": 6000.75,
-          "date": "2024-03-12",
-          "paymentChannel": "in store",
+          "date": "2024-12-12",
+          "paymentChannel": "401k",
           "category": "Groceries",
           "type": "debit"
       },
