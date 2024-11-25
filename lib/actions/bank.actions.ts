@@ -35,7 +35,10 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
     }));
 
     const totalBanks = accounts?.length || 0;
-    const totalCurrentBalance = 150000 * (accounts?.length || 0);
+    const totalCurrentBalance = (150000 * (accounts?.length || 0)).toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
 
     return parseStringify({ 
       data: accounts, 
