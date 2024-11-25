@@ -22,7 +22,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
 
     const accounts = banks?.map((bank: Bank) => ({
       id: bank.$id,
-      availableBalance: 6,000.00,
+      availableBalance: 6000.00,
       currentBalance: 6,000.00,
       name: "Savings Plus",
       officialName: "Horizon Bank Account",
