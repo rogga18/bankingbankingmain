@@ -35,12 +35,12 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
     }));
 
     const totalBanks = accounts?.length || 0;
-    const totalCurrentBalance = 600000 * (accounts?.lenght || 0);
+    const totalCurrentBalance = (600000 * totalBanks).toFixed(2);
 
-    return parseStringify({ 
-      data: accounts, 
-      totalBanks, 
-      totalCurrentBalance 
+    return parseStringify({
+      data: accounts,
+      totalBanks,
+      totalCurrentBalance
     });
   } catch (error) {
     console.error("An error occurred while getting the accounts:", error);
@@ -51,14 +51,14 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
 export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
   try {
     const bank = await getBank({ documentId: appwriteItemId });
-    
+   
     const account = {
       id: bank.$id,
       availableBalance: 600000,
       currentBalance: 600000,
       name: "Lillian Justice",
       officialName: "Horizon Bank Account",
-      mask: "6775",
+      mask: "1547",
       type: "checking",
       subtype: "checking",
       appwriteItemId: bank.$id,
@@ -86,7 +86,7 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     const sampleTransactions = [
         {
           "id": "tx4",
-          "name": "401K Pension Transfer",
+          "name": "Pension Transfer",
           "amount": 6000.75,
           "date": "2024-03-12",
           "paymentChannel": "in store",
@@ -97,10 +97,10 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
           "id": "tx5",
           "name": "Gas Station",
           "amount": 42.30,
-          "date": "2024-03-12",
-          "paymentChannel": "Penssion",
-          "category": "Penssion",
-          "type": "Direct deposite"
+          "date": "2024-03-11",
+          "paymentChannel": "in store",
+          "category": "Transportation",
+          "type": "debit"
       },
       {
           "id": "tx6",
