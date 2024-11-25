@@ -22,8 +22,8 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
 
     const accounts = banks?.map((bank: Bank) => ({
       id: bank.$id,
-      availableBalance: 6000.00,
-      currentBalance: 6,000.00,
+      availableBalance: 600000,
+      currentBalance: 600000,
       name: "Savings Plus",
       officialName: "Horizon Bank Account",
       mask: "6775",
@@ -35,7 +35,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
     }));
 
     const totalBanks = accounts?.length || 0;
-    const totalCurrentBalance = 6,000.00 * (accounts?.lenght || 0);
+    const totalCurrentBalance = 600000 * (accounts?.lenght || 0);
 
     return parseStringify({ 
       data: accounts, 
@@ -54,8 +54,8 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     
     const account = {
       id: bank.$id,
-      availableBalance: 6,000.00,
-      currentBalance: 6,000.00,
+      availableBalance: 600000,
+      currentBalance: 600000,
       name: "Lillian Justice",
       officialName: "Horizon Bank Account",
       mask: "6775",
