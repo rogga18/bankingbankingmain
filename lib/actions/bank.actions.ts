@@ -86,8 +86,8 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     const sampleTransactions = [
         {
           "id": "tx4",
-          "name": "Grocery Store",
-          "amount": 56.75,
+          "name": "Wells Fargo Transfer",
+          "amount": 150,000.75,
           "date": "2024-03-12",
           "paymentChannel": "in store",
           "category": "Groceries",
