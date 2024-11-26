@@ -23,7 +23,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
     const accounts = banks?.map((bank: Bank) => ({
       id: bank.$id,
       availableBalance: 6000,
-      currentBalance:00 ,
+      currentBalance: 0,
       name: "Savings Plus",
       officialName: "Horizon Bank Account",
       mask: "6775",
@@ -35,7 +35,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
     }));
 
     const totalBanks = accounts?.length || 0;
-    const totalCurrentBalance = (00 * totalBanks).toFixed(2);
+    const totalCurrentBalance = (0 * totalBanks).toFixed(2);
 
     return parseStringify({
       data: accounts,
