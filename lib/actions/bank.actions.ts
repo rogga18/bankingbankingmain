@@ -23,7 +23,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
     const accounts = banks?.map((bank: Bank) => ({
       id: bank.$id,
       availableBalance: 6000,
-      currentBalance: 0,
+      currentBalance: 6000,
       name: "Savings Plus",
       officialName: "Horizon Bank Account",
       mask: "6775",
@@ -55,7 +55,7 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
     const account = {
       id: bank.$id,
       availableBalance: 6000,
-      currentBalance:00,
+      currentBalance: 6000,
       name: "Lillian Justice",
       officialName: "Horizon Bank Account",
       mask: "1547",
